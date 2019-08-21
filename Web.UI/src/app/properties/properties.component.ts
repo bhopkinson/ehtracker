@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Property } from '../models/property';
 
 @Component({
   selector: 'app-properties',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertiesComponent implements OnInit {
 
-  property = "Wenlock Priory";
+  properties: Property[];
 
   constructor() { }
 
