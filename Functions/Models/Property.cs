@@ -10,7 +10,6 @@ namespace Functions.Models
         public string Path { get; set; }
         public string ImagePath { get; set; }
         public GeoCoordinate Location { get; set; }
-        public Visit[] Visits { get; set; }
         public bool IsCurrent { get; set; }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Functions.Models;
@@ -74,8 +75,26 @@ namespace Functions
                     addedProperties.Add(sourceProperty);
                 }
 
-                
+                var updatedFields = new List<string>();
+
+                if (sourceProperty.Name != destinationProperty.Name)
+                {
+                    destinationProperty.Name = sourceProperty.Name;
+                    updatedFields.Add(nameof(sourceProperty.Name));
+                }
+
+                if (sourceProperty.Summary != destinationProperty.Summary)
+                {
+                    destinationProperty.Summary = sourceProperty.Summary;
+                    updatedFields.Add(nameof(sourceProperty.Summary));
+                }
             }
         }
+
+        //private static bool UpdatePropertyField<T>(Property source, Property destination, Action<Property, T> field)
+        //{
+            
+        //    field(source, )
+        //}
     }
 }
