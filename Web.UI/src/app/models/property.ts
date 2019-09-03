@@ -3,6 +3,6 @@ export class Property {
     name: string;
     // summary: string;
     // url: string;
-    // lattitude: number;
-    // longitude: number;
+    latitude: number;
+    longitude: number;
 }

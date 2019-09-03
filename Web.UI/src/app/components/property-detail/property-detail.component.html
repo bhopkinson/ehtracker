@@ -1,0 +1,6 @@
+<div *ngIf="property">
+  <h2>{{property.name}}</h2>
+  <agm-map [latitude]="property.latitude" [longitude]="property.longitude">
+    <agm-marker [latitude]="property.latitude" [longitude]="property.longitude"></agm-marker>
+  </agm-map>
+</div>

@@ -13,4 +13,8 @@ export class PropertyService {
   getProperties(): Observable<Property[]> {
     return of(PROPERTIES);
   }
+
+  getProperty(id: number): Observable<Property> {
+    return of(PROPERTIES.find(property => property.id === id));
+  }
 }
