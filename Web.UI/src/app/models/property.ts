@@ -5,4 +5,5 @@ export class Property {
     // url: string;
     latitude: number;
     longitude: number;
+    imageUrl: string
 }

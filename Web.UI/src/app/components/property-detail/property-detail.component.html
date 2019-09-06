@@ -1,6 +1,9 @@
 <div *ngIf="property">
-  <h2>{{property.name}}</h2>
-  <agm-map [latitude]="property.latitude" [longitude]="property.longitude">
-    <agm-marker [latitude]="property.latitude" [longitude]="property.longitude"></agm-marker>
+  <div class="property-hero">
+    <img [src]="getHeroImageUrl()">
+  </div>
+  <agm-map [latitude]="property.latitude" [longitude]="property.longitude" [zoom]="13">
+    <agm-marker [latitude]="property.latitude" [longitude]="property.longitude" [iconUrl]="'assets/images/pin-single-property.png'"></agm-marker>
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
   </agm-map>
 </div>

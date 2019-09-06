@@ -20,7 +20,7 @@ import { PropertyDetailComponent } from './components/property-detail/property-d
       apiKey: 'AIzaSyCLQ_puB6P9wzoeAB1lnQ8NirBX2hzidP8'
     })
   ],
-  providers: [],
+  providers: [Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
